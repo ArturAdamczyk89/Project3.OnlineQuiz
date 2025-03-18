@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trivia Quiz Challenge</h1>
+        </header>
+        
+        <!-- Home screen with settings -->
+        <section id="settings-section">
+            <h2>Welcome to the Quiz!</h2>
+            <p>Test your knowledge with random trivia questions!</p>
+            
+            <div class="quiz-options">
+                <h3>Quiz Settings</h3>
+                
+                <div class="form-group">
+                    <label for="questionCount">Number of Questions:</label>
+                    <select id="questionCount">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="difficulty">Difficulty:</label>
+                    <select id="difficulty">
+                        <option value="">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="">Any Category</option>
+                        <!-- Categories will be filled from the API -->
+                    </select>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="start-quiz" class="btn primary-btn">Start Quiz</button>
+                <button id="how-to-play" class="btn secondary-btn">How to Play</button>
+            </div>
+        </section>
+        
+        <!-- How to play instructions -->
+        <section id="howto-section" class="hidden">
+            <h2>How to Play</h2>
+            <div class="instructions">
+                <div class="instruction-step">
+                    <h3>1. Choose Your Settings</h3>
+                    <p>Pick how many questions, the difficulty, and category you want.</p>
+                </div>
+                
+                <div class="instruction-step">
+                    <h3>2. Answer Questions</h3>
+                    <p>Read each question and select your answer. You'll see right away if you got it right.</p>
+                </div>
+                
+                <div class="instruction-step">
+                    <h3>3. Check Your Score</h3>
+                    <p>After the quiz, you'll see your score and can review your answers.</p>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="back-to-home" class="btn secondary-btn">Back to Home</button>
+            </div>
+        </section>
+        
+        <!-- Loading spinner -->
+        <section id="loading-section" class="hidden">
+            <div class="loader"></div>
+            <p>Loading questions...</p>
+        </section>
+        
+        <!-- Quiz questions -->
+        <section id="quiz-section" class="hidden">
+            <div class="quiz-info">
+                <div class="quiz-progress">
+                    Question <span id="current-question">1</span> of <span id="total-questions">10</span>
+                </div>
+                <div class="score-display">
+                    Score: <span id="current-score">0</span>
+                </div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question-text">Question text will appear here</h2>
+                
+                <div id="answers-container">
+                    <!-- Answer buttons will be added here -->
+                </div>
+                
+                <div id="feedback-container" class="hidden">
+                    <p id="feedback-text"></p>
+                    <p id="correct-answer-text" class="hidden"></p>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="next-btn" class="btn primary-btn" disabled>Next Question</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results page -->
+        <section id="results-section" class="hidden">
+            <h2>Quiz Complete!</h2>
+            
+            <div class="score-summary">
+                <p>Your score: <span id="final-score">0</span>/<span id="max-score">10</span></p>
+                
+                <div class="progress-bar-container">
+                    <div id="progress-bar"></div>
+                </div>
+                
+                <div id="score-percentage"></div>
+                <div id="congrats-message"></div>
+            </div>
+            
+            <h3>Review Your Answers</h3>
+            <div id="questions-review">
+                <!-- Question review will appear here -->
+            </div>
+            
+            <div class="action-buttons">
+                <button id="restart-quiz" class="btn primary-btn">Try Again</button>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Created by Artur Adamczyk | Data from <a href="https://opentdb.com/" target="_blank">Open Trivia Database</a></p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

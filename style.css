@@ -1,0 +1,401 @@
+/* 
+ * My Trivia Quiz App Styles
+ * A responsive design for all screen sizes
+ */
+
+/* Base styles - I'm using a mobile-first approach */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+}
+
+/* Simple container with percentage width */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Typography - using rem for better scaling */
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #3498db;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 1rem;
+}
+
+/* All sections share these styles */
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Just a helper class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:disabled {
+    background-color: #ced4da;
+    cursor: not-allowed;
+}
+
+.primary-btn {
+    background-color: #3498db;
+}
+
+.secondary-btn {
+    background-color: #2c3e50;
+}
+
+/* Flexbox for the action buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+/* Quiz options area - always vertical */
+.quiz-options {
+    background-color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Loading spinner */
+.loader {
+    border: 0.5rem solid #f3f3f3;
+    border-top: 0.5rem solid #3498db;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading-section {
+    text-align: center;
+}
+
+/* Quiz info bar using flexbox */
+.quiz-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.quiz-progress, .score-display {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Question styling */
+#question-text {
+    margin: 1rem 0;
+}
+
+/* Answer options using flexbox for stacking */
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.answer-option {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f1f5f9;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.answer-option:hover {
+    background-color: #e2e8f0;
+}
+
+.answer-option.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+.answer-option.correct {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+}
+
+.answer-option.incorrect {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+}
+
+/* Feedback styling */
+#feedback-container {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#feedback-container.correct {
+    background-color: rgba(40, 167, 69, 0.1);
+    border: 1px solid #28a745;
+}
+
+#feedback-container.incorrect {
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid #dc3545;
+}
+
+/* Quiz controls */
+.quiz-controls {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+/* Results styling */
+.score-summary {
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+}
+
+#final-score, #max-score {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    height: 1.25rem;
+    background-color: #ced4da;
+    border-radius: 0.5rem;
+    margin: 0.75rem 0;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 0.5rem;
+    width: 0; /* Will be set by JS */
+    transition: width 1s ease-in-out;
+}
+
+#score-percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+#congrats-message {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 4px;
+}
+
+/* Question review items */
+#questions-review {
+    display: grid;
+    gap: 1rem;
+}
+
+.review-item {
+    padding: 1rem;
+    border-left: 5px solid #ced4da;
+    background-color: #f1f5f9;
+    border-radius: 0 4px 4px 0;
+}
+
+.review-item.correct {
+    border-left-color: #28a745;
+}
+
+.review-item.incorrect {
+    border-left-color: #dc3545;
+}
+
+.correct-answer {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.incorrect-answer {
+    color: #dc3545;
+    text-decoration: line-through;
+}
+
+/* How to play section */
+.instructions {
+    margin: 1rem 0;
+}
+
+.instruction-step {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid #ced4da;
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) {
+    /* Larger type on bigger screens */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* More padding in sections */
+    section {
+        padding: 1.5rem;
+    }
+    
+    /* Change button layout to side-by-side */
+    .action-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* Quiz info bar changes to row */
+    .quiz-info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* Make buttons bigger for better touch targets */
+    .btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+    /* A bit of fluid typography for headings */
+    h1 {
+        font-size: calc(1.75rem + 0.5vw);
+    }
+    
+    /* Review items in a grid on large screens */
+    #questions-review {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
