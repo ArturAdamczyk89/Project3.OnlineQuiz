@@ -82,14 +82,20 @@ The test results showed these types of error messages:
   1. Trailing spaces have been deleted where they were indicated and in fact found
   2. Where possible without breaking the code->Lines have been split. Not everywhere it was possible due to method chaining.
   3. I've had a look at the indicated line which showed this bit of code:
+
 ![undefined error](<Testing Screenshots/undef potential error.jpg>)
+
   This is the template literal for displaying the correct answer - should the person doing the quiz select an incorrect answer.
 The issue potentially might have been highlighted due to using the negation syntax at the beginning. 
   So I've attempted to make the code more clearly understandable and error free by rewriting it in a way that would make it function
 in the same way but without potentially causing/triggering an error.
+
 ![undefined error fix](<Testing Screenshots/undef error rewritten code.jpg>)
+
   In both cases when running the aplication the functionality remained the same. Which I am proving by doing manual testing showed below:
+
 ![manual test to confirm error](<Testing Screenshots/Manual CODE Test.jpg>)
+
 ## Conslusions
 After doing the fixes in the places indicated I've managed to decease significantly the amount of potential issues highlighted in the initial test:
 
@@ -113,7 +119,7 @@ The website has been tested for performance, accessibility, best practice and SE
 - [Open Trivia Database](https://opentdb.com/) for providing the free trivia API
 - [W3C Validators](https://validator.w3.org/) for code validation tools
 
-##Contact
+## Contact
 artur.adamczyk89@gmail.com
 
 
