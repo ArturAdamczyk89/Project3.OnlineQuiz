@@ -103,7 +103,7 @@ After doing the fixes in the places indicated I've managed to decease significan
 
  I've attempted apply fixes while still preserving the original functionality of the program. As shown
  in the manual test of the application the code in fact was working for the programmed bit of logic pertaining to the potential error. Hence concluding
- that the warining message was unjustified.
+ that the warning message was unjustified.
 ### Lighthouse
 The website has been tested for performance, accessibility, best practice and SEO.
 ![Devtools Lighthouse Score](<Lighthouse Score.jpg>)
