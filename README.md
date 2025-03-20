@@ -2,7 +2,7 @@
 
 A dynamic, responsive web application that allows users to test their knowledge with customizable trivia quizzes. Built with HTML, CSS, and JavaScript.
 
-![Trivia Quiz Challenge screenshot](Trivia Quiz Challenge.png)
+![Trivia Quiz Challenge screenshot](<Trivia Quiz Challenge.jpg>)
 
 ## Live Demo
 
@@ -62,42 +62,45 @@ The application fetches trivia questions from the Open Trivia Database API based
 
 ### HTML Validation
 The HTML code was validated using the [W3C Markup Validation Service](https://validator.w3.org/).
-[Test result](HTML result.jpg)
+![Test Result](<Testing Screenshots/HTML result.jpg>)
 As indicated in the html validator. No errors were found.
 ### CSS Validation
 The CSS code was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 ## Results
-[Test result](CSS RESULT.jpg)
+![Test Result](<Testing Screenshots/CSS RESULT.jpg>)
 As indicated in the css validator. No errors were found.
 ### JavaScript Validation
 The JavaScript code was validated using [Minifier javascript validator](https://www.minifier.org/javascript-validator)
 ## Results
-[Test result](JS Test trailling space.jpg)
-[Test result](JS test Char length and Undefined.jpg)
+![Test result](<Testing Screenshots/JS Test trailling space.jpg>)
+![Test result](<Testing Screenshots/JS test Char length and Undefined.jpg>)
 The test results showed these types of error messages: 
-1.trailing spaces
-2.indicated long code over 80 character long
-3.undefined error (possibly an undefined variable)
+  1. trailing spaces
+  2. indicated long code over 80 character long
+  3. undefined error (possibly an undefined variable)
 ## Resolution
-1.Trailing spaces have been deleted where they were indicated and in fact found
-2.Where possible without breaking the code->Lines have been split. Not everywhere it was possible due to method chaining.
-3.I've had a look at the indicated line which showed this bit of code:
-[undefined error](undef potential error.jpg)
-This is the template literal for displaying the correct answer - should the person doing the quiz select an incorrect answer.
+  1. Trailing spaces have been deleted where they were indicated and in fact found
+  2. Where possible without breaking the code->Lines have been split. Not everywhere it was possible due to method chaining.
+  3. I've had a look at the indicated line which showed this bit of code:
+![undefined error](<Testing Screenshots/undef potential error.jpg>)
+  This is the template literal for displaying the correct answer - should the person doing the quiz select an incorrect answer.
 The issue potentially might have been highlighted due to using the negation syntax at the beginning. 
-So I've attempted to make the code more clearly understandable and error free by rewriting it in a way that would make it function
+  So I've attempted to make the code more clearly understandable and error free by rewriting it in a way that would make it function
 in the same way but without potentially causing/triggering an error.
-[undefined error fix](undef error rewritten code.jpg)
-In both cases when running the aplication the functionality remained the same. Which I am proving by doing manual testing showed below:
-[manual test to confirm error](Manual CODE Test.jpg)
+![undefined error fix](<Testing Screenshots/undef error rewritten code.jpg>)
+  In both cases when running the aplication the functionality remained the same. Which I am proving by doing manual testing showed below:
+![manual test to confirm error](<Testing Screenshots/Manual CODE Test.jpg>)
 ## Conslusions
 After doing the fixes in the places indicated I've managed to decease significantly the amount of potential issues highlighted in the initial test:
- [testresult after fixes](AFTER FIXES.jpg). I've attempted apply fixes while still preserving the original functionality of the program. As shown
+
+ ![testresult after fixes](<Testing Screenshots/AFTER FIXES.jpg>)
+
+ I've attempted apply fixes while still preserving the original functionality of the program. As shown
  in the manual test of the application the code in fact was working for the programmed bit of logic pertaining to the potential error. Hence concluding
  that the warining message was unjustified.
 ### Lighthouse
 The website has been tested for performance, accessibility, best practice and SEO.
-[Devtools Lighthouse Score](Lighthouse Score.jpg)
+![Devtools Lighthouse Score](<Lighthouse Score.jpg>)
 ## Possible Future Enhancements
 
 - Timer functionality for each question
