@@ -96,7 +96,7 @@ in the same way but without potentially causing/triggering an error.
 
 ![manual test to confirm error](<Testing Screenshots/Manual CODE Test.jpg>)
 
-## Conslusions
+## Conclusions
 After doing the fixes in the places indicated I've managed to decease significantly the amount of potential issues highlighted in the initial test:
 
  ![testresult after fixes](<Testing Screenshots/AFTER FIXES.jpg>)
